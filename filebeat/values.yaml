@@ -83,7 +83,7 @@ deployment:
   labels: {}
   affinity: {}
   # Include the deployment
-  enabled: false
+  enabled: true
   # Extra environment variables for Filebeat container.
   envFrom: []
   # - configMapRef:
@@ -111,9 +111,9 @@ deployment:
   filebeatConfig:
     filebeat.yml: |
       filebeat.inputs:
-        - type: log
-          paths:
-            - /usr/share/filebeat/logs/filebeat
+      - type: tcp
+        max_message_size: 10MiB
+        host: "localhost:9000"
 
       output.elasticsearch:
         host: "${NODE_NAME}"
