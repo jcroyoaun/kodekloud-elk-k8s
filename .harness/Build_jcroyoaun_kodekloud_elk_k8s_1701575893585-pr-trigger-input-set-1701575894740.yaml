@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jcroyoaun_kodekloud_elk_k8s_1701575893585-pr-trigger-input-set
+  identifier: Build_jcroyoaun_kodekloud_elk_k8s_1701575893585prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_jcroyoaun_kodekloud_elk_k8s_1701575893585
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
