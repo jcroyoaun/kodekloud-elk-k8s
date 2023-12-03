@@ -6,9 +6,9 @@ pipeline:
   properties:
     ci:
       codebase:
-        build: <+input>
         connectorRef: account.Github
-        repoName: jcroyoaun/kodekloud-elk-k8s
+        repoName: croyoaun/elk-stack-demoapp
+        build: <+input>
   stages:
     - stage:
         identifier: build
