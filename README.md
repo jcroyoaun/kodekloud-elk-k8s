@@ -13,11 +13,11 @@ Once the ingress controller has been installed, install ELK stack by simply foll
 
 ```bash
 cd elasticsearch
-helm --upgrade install elasticsearch .
+helm upgrade --install elasticsearch .
 cd ../logstash
-helm --upgrade install logstash .
+helm upgrade --install logstash .
 cd ../kibana
-helm --upgrade install kibana .
+helm upgrade --install kibana .
 cd ../filebeat
 helm --upgrade install filebeat .
 ```
